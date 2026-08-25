@@ -1,0 +1,29 @@
+# Virtual environments and Python caches.
+**/.venv/
+**/__pycache__/
+*.py[cod]
+
+# Local datasets and private recordings.
+data/
+test_voices/
+*.wav
+*.m4a
+*.mp3
+
+# Downloaded/trained model checkpoints and large model archives.
+*.pt
+*.pth
+*.ckpt
+*.hdf5
+*.zip
+*.tar.gz
+model-files/**/models/
+model-files/**/checkpoints/
+
+# Local experiment stores and logs.
+mlruns/
+mlruns.db
+*.log
+
+# Temporary audio generated outside the test directory.
+dirty.wav

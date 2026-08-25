@@ -1,0 +1,22 @@
+# Audio arrays and numerical processing.
+numpy>=1.24
+
+# WAV audio input and output.
+soundfile>=0.12
+
+# Audio resampling.
+scipy>=1.11
+
+# Objective speech-quality metrics.
+pesq>=0.0.4
+pystoi>=0.4.1
+
+# PyTorch inference for DeepFilterNet3 and DCCRN.
+torch>=2.1
+torchaudio>=2.1
+
+# ONNX Runtime CPU inference for DTLN.
+onnxruntime>=1.16
+
+# Required by the local DeepFilterNet source.
+loguru>=0.7

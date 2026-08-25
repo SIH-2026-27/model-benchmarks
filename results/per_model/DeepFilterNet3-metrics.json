@@ -1,0 +1,20 @@
+{
+  "model": "DeepFilterNet3",
+  "backend": "pytorch",
+  "input_file": "test_voices/dirty_construction_0dB.wav",
+  "clean_reference": "test_voices/clean.wav",
+  "output_file": "results/per_model/DeepFilterNet3-filtered.wav",
+  "duration_seconds": 16.128,
+  "processing_seconds": 0.4920542080071755,
+  "real_time_factor": 0.0305093134925084,
+  "model_sample_rate": 48000,
+  "model_size_bytes": 8716140,
+  "input_snr_db": -3.3651772355369758e-06,
+  "output_snr_db": 9.969611167907715,
+  "snr_improvement_db": 9.96961453308495,
+  "input_si_sdr_db": 0.0019415311980992556,
+  "output_si_sdr_db": 10.138855934143066,
+  "si_sdr_improvement_db": 10.136914402944967,
+  "stoi": 0.6761648159453,
+  "pesq": 1.3307656049728394
+}
