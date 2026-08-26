@@ -1,0 +1,14 @@
+{
+  "model": "DTLN",
+  "backend": "onnxruntime",
+  "input_file": "test_voices/clean.wav",
+  "reference": "test_voices/clean.wav",
+  "output_file": "results/clean_input_test/DTLN-clean-input.wav",
+  "duration_seconds": 16.128,
+  "processing_seconds": 0.33604937500786036,
+  "real_time_factor": 0.020836394779753246,
+  "output_snr_vs_clean_db": -13.057168960571289,
+  "stoi_vs_clean": 0.8971551407304439,
+  "pesq_vs_clean": 2.0035834312438965,
+  "model_size_bytes": 6080024
+}
