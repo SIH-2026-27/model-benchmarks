@@ -1,2 +1,0 @@
-model,backend,input_file,clean_reference,output_file,duration_seconds,processing_seconds,real_time_factor,input_snr_db,output_snr_db,snr_improvement_db,input_si_sdr_db,output_si_sdr_db,si_sdr_improvement_db,stoi,pesq,model_size_bytes
-DTLN,onnxruntime,test_voices/dirty_construction_0dB.wav,test_voices/clean.wav,results/per_model/DTLN-filtered.wav,16.128,0.3339749160222709,0.0207077700906666,-3.3651772355369758e-06,-13.247495651245117,-13.247492286067882,0.0019415311980992556,11.522920608520508,11.520979077322409,0.6384309110260323,1.2640023231506348,6080024

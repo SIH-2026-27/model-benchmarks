@@ -1,0 +1,14 @@
+{
+  "model": "DCCRN",
+  "backend": "pytorch",
+  "input_file": "test_voices/clean.wav",
+  "reference": "test_voices/clean.wav",
+  "output_file": "results/clean_input_test/DCCRN-clean-input.wav",
+  "duration_seconds": 16.125,
+  "processing_seconds": 1.3045606249943376,
+  "real_time_factor": 0.08090298449577288,
+  "output_snr_vs_clean_db": -2.8142120838165283,
+  "stoi_vs_clean": 0.946232644649463,
+  "pesq_vs_clean": 2.2553200721740723,
+  "model_size_bytes": 46489036
+}

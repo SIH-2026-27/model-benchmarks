@@ -1,0 +1,15 @@
+{
+  "model": "DeepFilterNet3",
+  "backend": "pytorch",
+  "input_file": "test_voices/clean.wav",
+  "reference": "test_voices/clean.wav",
+  "output_file": "results/clean_input_test/DeepFilterNet3-clean-input.wav",
+  "duration_seconds": 16.128,
+  "processing_seconds": 0.4290977089549415,
+  "real_time_factor": 0.026605760723892702,
+  "model_sample_rate": 48000,
+  "model_size_bytes": 8716140,
+  "output_snr_vs_clean_db": 13.829461097717285,
+  "stoi_vs_clean": 0.918444514285246,
+  "pesq_vs_clean": 2.031697988510132
+}
