@@ -1,0 +1,14 @@
+{
+  "model": "GTCRN",
+  "backend": "pytorch",
+  "input_file": "test_voices/clean.wav",
+  "reference": "test_voices/clean.wav",
+  "output_file": "results/clean_input_test/GTCRN-clean-input.wav",
+  "duration_seconds": 16.128,
+  "processing_seconds": 0.6607,
+  "real_time_factor": 0.040966021825396826,
+  "output_snr_vs_clean_db": 15.425159002502689,
+  "stoi_vs_clean": 0.9301618843711185,
+  "pesq_vs_clean": 2.009249210357666,
+  "model_size_bytes": 579819
+}
