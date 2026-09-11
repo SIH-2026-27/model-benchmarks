@@ -16,6 +16,26 @@ The source metrics are available in [`results/clean_input_test/`](results/clean_
 
 ---
 
+## DeepFilterNet3: Pretrained vs. Fine-Tuned Benchmark
+
+Evaluation comparing the baseline pretrained DeepFilterNet3 checkpoint against the fine-tuned DeepFilterNet3 model.
+
+| Metric | Pretrained DF3 | Fine-tuned DF3 | Improvement |
+| :--- | ---: | ---: | ---: |
+| **SI-SDR** | 12.71 dB | 14.95 dB | **+2.24 dB** |
+| **STOI** | 0.667 | 0.708 | **+0.041** |
+| **PESQ** | 1.850 | 2.119 | **+0.269** |
+| **SNR** | 12.30 dB | 15.01 dB | **+2.71 dB** |
+| **Median RTF** | 9.92× | 8.32× | **Faster** |
+
+### Key Observations
+
+* **Objective Quality & Intelligibility:** Fine-tuning delivers substantial gains across perceptual metrics, improving PESQ by **+0.269** and STOI by **+0.041**.
+* **Signal Separation & Suppression:** Demonstrates marked improvements in separation fidelity with a **+2.24 dB SI-SDR** increase and a **+2.71 dB SNR** boost over the pretrained baseline.
+* **Efficiency:** Maintains lower median processing overhead, shifting runtime factor from **9.92× down to 8.32×**.
+
+---
+
 ## Noisy-input benchmark — Construction noise
 
 The noisy-input benchmark evaluates how effectively each model enhances speech when the input contains construction noise at different signal-to-noise ratios (SNRs). The clean reference is `test_voices/clean.wav`.
@@ -85,15 +105,10 @@ Each directory contains the enhanced WAV files and the corresponding `metrics.cs
 ### Models & Backends
 
 * **DTLN (Dual-Signal Transformation LSTM Network):** A lightweight speech enhancement architecture combining Short-Time Fourier Transform (STFT) magnitude spectrograms with learnable convolutional feature representations.
-
 * **DeepFilterNet3:** A deep filtering framework designed for full-band (48 kHz) audio that enhances the spectral envelope and uses deep filtering to reconstruct harmonic speech structures.
-
 * **DCCRN (Deep Complex Convolution Recurrent Network):** A complex-domain network designed to process both magnitude and phase information of audio simultaneously via complex convolutions and complex LSTMs.
-
 * **GTCRN:** An ultra-lightweight speech enhancement network using ShuffleNetV2-based feature extraction, Subband Feature Extraction (SFE), Temporal Recurrent Attention (TRA), and dual-path gated recurrent neural network components. The evaluated DNS3 checkpoint is approximately 0.58 MB.
-
 * **ONNX Runtime:** A high-performance inference engine optimized across hardware targets for deployed machine learning models.
-
 * **PyTorch:** The native Python deep learning framework used for training and experimental inference evaluation.
 
 ---
@@ -117,15 +132,11 @@ An RTF below 1.0 means the model processes audio faster than real-time playback.
 
 #### 3. Output SNR (Signal-to-Noise Ratio)
 
-Output SNR compares the energy of the desired clean speech against the error between the clean reference and enhanced signal.
-
-Higher values indicate better agreement with the clean reference under this evaluation.
+Output SNR compares the energy of the desired clean speech against the error between the clean reference and enhanced signal. Higher values indicate better agreement with the clean reference under this evaluation.
 
 #### 4. SI-SDR (Scale-Invariant Signal-to-Distortion Ratio)
 
-SI-SDR measures the quality of the enhanced signal relative to the clean reference while being invariant to overall signal scaling.
-
-Higher SI-SDR and SI-SDR improvement indicate better enhancement performance.
+SI-SDR measures the quality of the enhanced signal relative to the clean reference while being invariant to overall signal scaling. Higher SI-SDR and SI-SDR improvement indicate better enhancement performance.
 
 #### 5. STOI (Short-Time Objective Intelligibility)
 
@@ -137,9 +148,7 @@ PESQ is an objective perceptual speech-quality metric. Higher values generally i
 
 #### 7. Model Size (MB)
 
-Model size represents the disk footprint of the model weights/checkpoint used for inference.
-
-Smaller models are advantageous for memory-constrained and edge deployments.
+Model size represents the disk footprint of the model weights/checkpoint used for inference. Smaller models are advantageous for memory-constrained and edge deployments.
 
 ---
 
